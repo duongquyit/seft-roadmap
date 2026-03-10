@@ -1,0 +1,338 @@
+{
+  "phases": [
+    {
+      "id": 1,
+      "period": "Tháng 1–6",
+      "year": "Năm 1",
+      "title": "Consolidate Core",
+      "subtitle": "Củng cố nền tảng Node.js",
+      "color": "#4ADE80",
+      "icon": "⚙️",
+      "level": "Junior → Mid",
+      "focus": "Node.js Deep Dive",
+      "goals": [
+        {
+          "category": "Node.js Internals",
+          "icon": "💚",
+          "items": [
+            "Hiểu sâu Event Loop: call stack, task queue, microtask queue, libuv",
+            "Node.js Streams: Readable/Writable/Transform — xử lý file lớn không OOM",
+            "Worker Threads vs Cluster: biết khi nào dùng để bypass single-thread limit",
+            "Memory model: heap snapshot, V8 GC tuning, detect memory leak bằng clinic.js",
+            "Package.json mastery: workspace, peer deps, bundledDeps cho monorepo"
+          ]
+        },
+        {
+          "category": "TypeScript & Code Quality",
+          "icon": "🔷",
+          "items": [
+            "TypeScript strict mode: utility types, generics, discriminated unions",
+            "ESLint + Prettier + Husky: enforce standards tự động trong CI",
+            "Unit test với Jest: mock, spy, coverage >80% cho service layer",
+            "REST API best practices: versioning, pagination, error response format chuẩn"
+          ]
+        },
+        {
+          "category": "Enterprise Basics",
+          "icon": "🏢",
+          "items": [
+            "Đọc hiểu và tuân thủ existing ADRs (Architecture Decision Records)",
+            "Viết technical documentation theo template của công ty",
+            "Tham gia code review — comment có context, không chỉ nitpick syntax"
+          ]
+        }
+      ],
+      "milestone": "Được tin tưởng giao task độc lập, code không cần review từng dòng"
+    },
+    {
+      "id": 2,
+      "period": "Tháng 7–12",
+      "year": "Năm 1",
+      "title": "System Thinking",
+      "subtitle": "Tư duy hệ thống & Enterprise patterns",
+      "color": "#60A5FA",
+      "icon": "🏗️",
+      "level": "Mid Junior",
+      "focus": "Architecture & DevOps",
+      "goals": [
+        {
+          "category": "NestJS & Enterprise Patterns",
+          "icon": "🐈",
+          "items": [
+            "NestJS deep dive: DI container, interceptors, guards, pipes, custom decorators",
+            "Repository pattern + Unit of Work với TypeORM/Prisma",
+            "CQRS cơ bản trong NestJS: Commands, Queries, Events",
+            "Message queue: Bull/BullMQ (Redis-backed) — job processing, retry, dead-letter queue"
+          ]
+        },
+        {
+          "category": "Database & Caching",
+          "icon": "🗄️",
+          "items": [
+            "PostgreSQL nâng cao: EXPLAIN ANALYZE, partial index, JSONB queries, connection pooling (PgBouncer)",
+            "Redis: caching patterns, pub/sub, distributed lock (Redlock algorithm)",
+            "Database migration strategy: zero-downtime migration trong enterprise environment"
+          ]
+        },
+        {
+          "category": "DevOps & CI/CD",
+          "icon": "🚀",
+          "items": [
+            "Docker multi-stage build: optimize image size cho Node.js app",
+            "Jenkins / GitHub Actions: pipeline as code, parallel jobs, artifacts",
+            "SonarQube: integrate code quality gate vào pipeline — không merge nếu quality fail"
+          ]
+        }
+      ],
+      "milestone": "Tự thiết kế module mới từ đầu, explain được trade-offs cho senior review"
+    },
+    {
+      "id": 3,
+      "period": "Tháng 13–18",
+      "year": "Năm 2",
+      "title": "Scale & Reliability",
+      "subtitle": "Xây dựng hệ thống enterprise-grade",
+      "color": "#F59E0B",
+      "icon": "⚡",
+      "level": "Mid",
+      "focus": "Performance & Observability",
+      "goals": [
+        {
+          "category": "Node.js Performance",
+          "icon": "🔧",
+          "items": [
+            "Profiling: Chrome DevTools, 0x flame graph — identify CPU bottleneck trong production",
+            "HTTP/2 & keep-alive tuning: optimize connection reuse cho high-throughput API",
+            "Kafka integration với Node.js: consumer groups, offset management, exactly-once semantics",
+            "GraphQL với Apollo Server: DataLoader để solve N+1, persisted queries, caching"
+          ]
+        },
+        {
+          "category": "Enterprise Reliability",
+          "icon": "🛡️",
+          "items": [
+            "Circuit breaker với opossum: fallback strategy, half-open state handling",
+            "Distributed tracing: OpenTelemetry + Jaeger — trace request qua microservices Node.js",
+            "SLI/SLO: define availability & latency targets cho service, setup alerting tương ứng",
+            "Chaos engineering nhỏ: simulate failure trong staging, verify resilience"
+          ]
+        },
+        {
+          "category": "Leadership Prep",
+          "icon": "👥",
+          "items": [
+            "Mentor 1 junior Node.js dev: pair programming, explain event loop & async patterns",
+            "Viết RFC đầu tiên: propose technical decision với pros/cons rõ ràng",
+            "On-call: participate incident response, write post-mortem đầu tiên"
+          ]
+        }
+      ],
+      "milestone": "Được giao phụ trách service quan trọng end-to-end — từ design đến production"
+    },
+    {
+      "id": 4,
+      "period": "Tháng 19–24",
+      "year": "Năm 2",
+      "title": "Tech Ownership",
+      "subtitle": "Security, Cloud & Enterprise Compliance",
+      "color": "#A78BFA",
+      "icon": "🎯",
+      "level": "Mid → Senior",
+      "focus": "Security & Cloud",
+      "goals": [
+        {
+          "category": "Security (Enterprise-grade)",
+          "icon": "🔐",
+          "items": [
+            "OWASP Top 10 cho Node.js: Injection, XSS, SSRF — viết được exploit demo & fix",
+            "OAuth2 / OIDC: integrate Keycloak hoặc Azure AD — SSO trong enterprise environment",
+            "npm audit automation: Dependabot + Snyk trong pipeline, triage CVEs",
+            "Secret scanning: git-secrets, detect-secrets — prevent credentials leak",
+            "GDPR/data privacy: PII masking trong logs, right-to-erasure implementation"
+          ]
+        },
+        {
+          "category": "Cloud & Kubernetes",
+          "icon": "☁️",
+          "items": [
+            "AWS hoặc Azure: deploy Node.js app lên EKS/AKS, hiểu resource requests/limits",
+            "Kubernetes: Deployment, Service, ConfigMap, HPA — scale Node.js service theo load",
+            "Helm charts: package và version Node.js app deployments",
+            "Terraform: provision được RDS, ElastiCache, MSK (Kafka) cho Node.js stack"
+          ]
+        },
+        {
+          "category": "Enterprise Influence",
+          "icon": "💡",
+          "items": [
+            "Propose và drive 1 significant improvement (performance, DX, hoặc security)",
+            "Tham gia technical interview panel cho vị trí backend Node.js",
+            "Tech talk nội bộ về Node.js topic (ít nhất 1 lần)"
+          ]
+        }
+      ],
+      "milestone": "Go-to person cho Node.js questions — team tìm bạn trước khi Google"
+    },
+    {
+      "id": 5,
+      "period": "Tháng 25–36",
+      "year": "Năm 3",
+      "title": "Senior Mastery",
+      "subtitle": "Architecture Leadership trong Enterprise",
+      "color": "#F472B6",
+      "icon": "🌟",
+      "level": "Senior",
+      "focus": "Architecture & Org Impact",
+      "goals": [
+        {
+          "category": "Enterprise Architecture",
+          "icon": "🏛️",
+          "items": [
+            "Lead design Node.js microservices platform từ 0 → production (>5 services)",
+            "Event Sourcing + CQRS với EventStoreDB hoặc Kafka — implement trong Node.js",
+            "DDD: model bounded contexts cho enterprise domain, define ubiquitous language với business",
+            "API versioning strategy: deprecation policy, backward compatibility, consumer-driven contract testing (Pact)"
+          ]
+        },
+        {
+          "category": "Cross-team Impact",
+          "icon": "🌐",
+          "items": [
+            "Define Node.js coding standards, security guidelines cho cả engineering org",
+            "Architecture Review Board: review và approve designs của các team khác",
+            "Inner source: tạo shared Node.js libraries được dùng bởi nhiều team",
+            "Collaborate với Enterprise Architect để align Node.js stack với org-wide standards"
+          ]
+        },
+        {
+          "category": "External Presence",
+          "icon": "📢",
+          "items": [
+            "Technical blog: ít nhất 6 bài/năm về Node.js, architecture, enterprise patterns",
+            "Contribute vào Node.js ecosystem: npm package hoặc PR cho popular library",
+            "NodeConf / JSConf Vietnam: submit talk proposal"
+          ]
+        }
+      ],
+      "milestone": "Senior Engineer — được mời vào technical strategy discussions của tổ chức"
+    },
+    {
+      "id": 6,
+      "period": "Tháng 37–48",
+      "year": "Năm 4",
+      "title": "Lead Transition",
+      "subtitle": "People, Process & Enterprise Navigation",
+      "color": "#FB923C",
+      "icon": "🧭",
+      "level": "Senior → Staff / Tech Lead",
+      "focus": "People & Enterprise Politics",
+      "goals": [
+        {
+          "category": "People Leadership",
+          "icon": "👨‍👩‍👧‍👦",
+          "items": [
+            "Formal mentor 2–3 engineers, own their growth plan và quarterly reviews",
+            "Navigate enterprise stakeholders: CTO, Product VP, Security team — communicate technical decisions lên C-level",
+            "Conflict resolution: technical disagreements giữa teams, build consensus không dùng authority",
+            "Define career ladder cho Backend engineer trong team"
+          ]
+        },
+        {
+          "category": "Enterprise Process",
+          "icon": "⚙️",
+          "items": [
+            "ITIL/Change Management: hiểu enterprise release process, CAB (Change Advisory Board)",
+            "FinOps: present cloud cost optimization proposals với ROI rõ ràng cho leadership",
+            "Vendor evaluation: RFP process cho enterprise tools (APM, API Gateway, Service Mesh)",
+            "Compliance: SOC 2, ISO 27001 awareness — know what engineering needs to do"
+          ]
+        },
+        {
+          "category": "Strategic Technical",
+          "icon": "🗺️",
+          "items": [
+            "Tech debt roadmap: quantify business impact, get budget approval từ management",
+            "Node.js platform strategy: runtime upgrades, LTS planning, migration playbooks",
+            "Build vs Buy: evaluate enterprise vendors vs custom Node.js solutions"
+          ]
+        }
+      ],
+      "milestone": "Engineering Lead — dẫn nhóm 4–8 người, được tin tưởng về cả technical lẫn delivery"
+    },
+    {
+      "id": 7,
+      "period": "Tháng 49–72",
+      "year": "Năm 5–6",
+      "title": "Technical Leader",
+      "subtitle": "Vision & Enterprise-wide Impact",
+      "color": "#EF4444",
+      "icon": "👑",
+      "level": "Principal / Tech Lead",
+      "focus": "Vision & Org Transformation",
+      "goals": [
+        {
+          "category": "Technical Vision",
+          "icon": "🔭",
+          "items": [
+            "Define Node.js/JS platform vision 3 năm: runtime strategy, edge computing, serverless adoption",
+            "Technology radar cho org: Adopt/Trial/Assess/Hold framework, communicate quarterly",
+            "AI/ML integration strategy: LLM APIs trong Node.js services, agentic workflows, RAG patterns",
+            "Present engineering strategy cho Board / C-suite — link technical decisions đến business outcomes"
+          ]
+        },
+        {
+          "category": "Org Transformation",
+          "icon": "🏢",
+          "items": [
+            "Platform Engineering: build Internal Developer Platform (IDP) — golden paths cho Node.js teams",
+            "Engineering excellence program: internal certifications, guilds, communities of practice",
+            "Grow senior engineers thành leads — replicate yourself",
+            "Engineering brand: make company attractive to Node.js talent (blog, talks, open source)"
+          ]
+        },
+        {
+          "category": "Legacy & Impact",
+          "icon": "🎓",
+          "items": [
+            "Known in Vietnam Node.js community as a trusted voice",
+            "Onboard toàn bộ engineering team mới trong <3 months với playbooks bạn xây",
+            "Đã deliver ít nhất 1 enterprise-scale system xử lý >1M requests/day"
+          ]
+        }
+      ],
+      "milestone": "🎉 Technical Leader — Định hình engineering direction của enterprise"
+    }
+  ],
+  "principles": [
+    {
+      "icon": "📚",
+      "title": "Learn in Public",
+      "desc": "Viết blog, làm talks — dạy người khác là cách học sâu nhất"
+    },
+    {
+      "icon": "🔁",
+      "title": "Depth before Breadth",
+      "desc": "Master 1 thứ trước khi nhảy sang cái khác. T-shaped knowledge."
+    },
+    {
+      "icon": "🤝",
+      "title": "Invest in People",
+      "desc": "Career của bạn tăng tốc khi bạn giúp người khác tăng tốc"
+    },
+    {
+      "icon": "⚡",
+      "title": "Ship & Iterate",
+      "desc": "Done > Perfect. Build, measure, learn. Đừng over-engineer"
+    },
+    {
+      "icon": "🧭",
+      "title": "Context Switching",
+      "desc": "Tech Lead = Technical + Communication + Business. Develop tất cả"
+    },
+    {
+      "icon": "📊",
+      "title": "Measure Progress",
+      "desc": "Review roadmap mỗi 6 tháng. Điều chỉnh, đừng cứng nhắc"
+    }
+  ]
+}
