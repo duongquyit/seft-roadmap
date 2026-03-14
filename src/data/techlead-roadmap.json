@@ -4,87 +4,117 @@
       "id": 1,
       "period": "Tháng 1–6",
       "year": "Năm 1",
-      "title": "Consolidate Core",
-      "subtitle": "Củng cố nền tảng Node.js",
+      "title": "Fix The Gaps Now",
+      "subtitle": "Giải quyết 3 pain point hàng ngày",
       "color": "#4ADE80",
-      "icon": "⚙️",
+      "icon": "🔥",
       "level": "Junior → Mid",
-      "focus": "Node.js Deep Dive",
+      "focus": "System Design + DB + DevOps (ưu tiên thực chiến)",
+      "salary": "~$800–1,200/tháng",
+      "salaryNote": "Junior backend VN market. Tăng lương sau mốc này khi chứng minh được output độc lập và propose solution thay vì chỉ implement.",
       "goals": [
         {
-          "category": "Node.js Internals",
-          "icon": "💚",
+          "category": "System Design Cơ Bản (pain point #1)",
+          "icon": "📐",
           "items": [
-            "Hiểu sâu Event Loop: call stack, task queue, microtask queue, libuv",
-            "Node.js Streams: Readable/Writable/Transform — xử lý file lớn không OOM",
-            "Worker Threads vs Cluster: biết khi nào dùng để bypass single-thread limit",
-            "Memory model: heap snapshot, V8 GC tuning, detect memory leak bằng clinic.js",
-            "Package.json mastery: workspace, peer deps, bundledDeps cho monorepo"
+            "Học framework để approach bất kỳ design problem: Requirements → Estimation → High-level → Deep dive → Bottlenecks",
+            "Tự design được 3 common systems: URL Shortener, Rate Limiter, Notification Service — vẽ diagram đầy đủ",
+            "Đọc chương 1–5 'Designing Data-Intensive Applications' — Kleppmann (quan trọng nhất năm nay)",
+            "Mỗi khi gặp feature phức tạp ở công ty: vẽ diagram trước khi code, dù không ai yêu cầu",
+            "Tham gia system design practice trên Pramp.com hoặc interviewing.io 1 lần/tháng — để biết mình đang ở đâu"
           ]
         },
         {
-          "category": "TypeScript & Code Quality",
-          "icon": "🔷",
+          "category": "Database Optimization (pain point #2)",
+          "icon": "🗄️",
           "items": [
-            "TypeScript strict mode: utility types, generics, discriminated unions",
-            "ESLint + Prettier + Husky: enforce standards tự động trong CI",
-            "Unit test với Jest: mock, spy, coverage >80% cho service layer",
-            "REST API best practices: versioning, pagination, error response format chuẩn"
+            "EXPLAIN ANALYZE: chạy được trên mọi slow query, đọc hiểu output (Seq Scan vs Index Scan, cost, rows)",
+            "Index strategy: biết khi nào cần composite index, partial index, index cho JSONB",
+            "N+1 detection: dùng query logger để detect, fix bằng JOIN hoặc eager loading",
+            "Connection pooling: hiểu tại sao cần PgBouncer, configure được pool size phù hợp",
+            "Áp dụng ngay: tìm 1 slow query trong project hiện tại, optimize, đo before/after latency"
           ]
         },
         {
-          "category": "Enterprise Basics",
-          "icon": "🏢",
+          "category": "DevOps Self-Implement (pain point #3)",
+          "icon": "🚀",
           "items": [
-            "Đọc hiểu và tuân thủ existing ADRs (Architecture Decision Records)",
-            "Viết technical documentation theo template của công ty",
-            "Tham gia code review — comment có context, không chỉ nitpick syntax"
+            "Docker: tự viết Dockerfile multi-stage cho Node.js app, hiểu layer caching để build nhanh hơn",
+            "Docker Compose: setup local dev environment với app + postgres + redis trong 1 file",
+            "GitHub Actions: tự setup CI pipeline — lint → test → build → deploy cho side project",
+            "Không chờ công ty giao — dùng side project làm lab để implement, không cần xin phép ai"
+          ]
+        },
+        {
+          "category": "Side Project Kickoff (lab thực hành duy nhất)",
+          "icon": "⚡",
+          "items": [
+            "Bắt đầu trong 2 tuần — không cần idea hay, cần đủ phức tạp để học. Gợi ý: Task Manager API hoặc Expense Tracker",
+            "Stack bắt buộc: Node.js + TypeScript + PostgreSQL + Redis + Docker + GitHub Actions CI/CD",
+            "Mục tiêu không phải ship product — mục tiêu là implement đủ: auth, CRUD, job queue, CI/CD pipeline",
+            "Commit ít nhất 3 lần/tuần — consistency quan trọng hơn velocity ở giai đoạn này"
           ]
         }
       ],
-      "milestone": "Được tin tưởng giao task độc lập, code không cần review từng dòng"
+      "milestone": "Tự propose được solution khi gặp feature phức tạp — không chỉ hỏi 'làm cái này thế nào'"
     },
     {
       "id": 2,
       "period": "Tháng 7–12",
       "year": "Năm 1",
-      "title": "System Thinking",
-      "subtitle": "Tư duy hệ thống & Enterprise patterns",
+      "title": "Build Without a Net",
+      "subtitle": "Tạo feedback loop thay thế mentor",
       "color": "#60A5FA",
       "icon": "🏗️",
       "level": "Mid Junior",
-      "focus": "Architecture & DevOps",
+      "focus": "Node.js Depth + Testing + Replace Mentor",
+      "salary": "~$1,200–1,800/tháng",
+      "salaryNote": "Đủ điều kiện negotiate mid-level nếu đã ship feature độc lập, propose solution, và có side project làm bằng chứng technical growth.",
       "goals": [
         {
-          "category": "NestJS & Enterprise Patterns",
-          "icon": "🐈",
+          "category": "Node.js Internals (bây giờ mới học sâu)",
+          "icon": "💚",
           "items": [
-            "NestJS deep dive: DI container, interceptors, guards, pipes, custom decorators",
-            "Repository pattern + Unit of Work với TypeORM/Prisma",
-            "CQRS cơ bản trong NestJS: Commands, Queries, Events",
-            "Message queue: Bull/BullMQ (Redis-backed) — job processing, retry, dead-letter queue"
+            "Event Loop deep dive: call stack, task queue, microtask queue, libuv — debug được async issue thực tế",
+            "Node.js Streams: Readable/Writable/Transform — xử lý file lớn không OOM trong side project",
+            "Worker Threads vs Cluster: implement được 1 CPU-intensive task bằng Worker Thread",
+            "Memory leak detection: dùng clinic.js, Chrome DevTools heap snapshot — fix được leak thực tế",
+            "Package.json mastery: workspace, peer deps — setup monorepo nếu side project đủ lớn"
           ]
         },
         {
-          "category": "Database & Caching",
-          "icon": "🗄️",
+          "category": "TypeScript & Testing",
+          "icon": "🔷",
           "items": [
-            "PostgreSQL nâng cao: EXPLAIN ANALYZE, partial index, JSONB queries, connection pooling (PgBouncer)",
-            "Redis: caching patterns, pub/sub, distributed lock (Redlock algorithm)",
-            "Database migration strategy: zero-downtime migration trong enterprise environment"
+            "TypeScript strict mode: utility types, generics, discriminated unions — áp dụng toàn bộ side project",
+            "Unit test với Jest: mock, spy, coverage >80% cho service layer của side project",
+            "Integration test với Supertest: test API endpoints với real HTTP calls, real DB (test containers)",
+            "Testing pyramid: biết phân biệt unit / integration / E2E và khi nào dùng cái nào — document lại cho bản thân",
+            "ESLint + Prettier + Husky: enforce standards tự động trong CI pipeline"
           ]
         },
         {
-          "category": "DevOps & CI/CD",
-          "icon": "🚀",
+          "category": "Replace Mentor Tactics (quan trọng nhất giai đoạn này)",
+          "icon": "🧭",
           "items": [
-            "Docker multi-stage build: optimize image size cho Node.js app",
-            "Jenkins / GitHub Actions: pipeline as code, parallel jobs, artifacts",
-            "SonarQube: integrate code quality gate vào pipeline — không merge nếu quality fail"
+            "Code review thay thế: sau mỗi PR trên side project, dùng AI review code — hỏi 'what's wrong / what can be improved'",
+            "System design feedback: vẽ diagram, post lên r/ExperiencedDevs hoặc Vietnam Backend group, hỏi 'what's wrong with this design'",
+            "Đọc PR của open source projects Node.js tương tự — xem senior dev review nhau như thế nào",
+            "Pramp / interviewing.io: mock interview 1 lần/tháng — không để tìm job, để calibrate gap thực tế",
+            "Find a virtual mentor: follow 3–5 senior Node.js engineers trên Twitter/X hoặc blog — đọc mọi thứ họ viết"
+          ]
+        },
+        {
+          "category": "DORA Metrics — Làm quen",
+          "icon": "📊",
+          "items": [
+            "Biết 4 chỉ số DORA: Deployment Frequency, Lead Time for Changes, MTTR, Change Failure Rate",
+            "Đo DORA cho side project của mình — setup tracking đơn giản bằng GitHub Actions logs",
+            "Quan sát team hiện tại: team bạn đang ở mức nào trong 4 chỉ số này? Ghi lại nhận xét"
           ]
         }
       ],
-      "milestone": "Tự thiết kế module mới từ đầu, explain được trade-offs cho senior review"
+      "milestone": "Side project chạy được production với CI/CD pipeline đầy đủ — có link để show trong interview"
     },
     {
       "id": 3,
@@ -95,7 +125,9 @@
       "color": "#F59E0B",
       "icon": "⚡",
       "level": "Mid",
-      "focus": "Performance & Observability",
+      "focus": "Performance, Observability & AI Integration",
+      "salary": "~$1,800–2,500/tháng",
+      "salaryNote": "Mid level rõ ràng. Nên chủ động negotiate hoặc thử apply job mới để test market value. Track record service ownership + side project là leverage tốt nhất.",
       "goals": [
         {
           "category": "Node.js Performance",
@@ -108,21 +140,34 @@
           ]
         },
         {
+          "category": "Testing Strategy (Service Level)",
+          "icon": "🧪",
+          "items": [
+            "Contract testing với Pact: consumer-driven contracts giữa Node.js microservices",
+            "E2E test với Playwright: automate critical user journeys của side project hoặc project công ty",
+            "Performance testing với k6: viết được load test script, đọc hiểu results, identify bottleneck",
+            "Test trong CI: parallel test execution, flaky test detection, fail fast strategy",
+            "Define testing strategy cho service mình phụ trách — document và propose cho team"
+          ]
+        },
+        {
+          "category": "AI/LLM Integration (bắt đầu ngay — đừng chờ)",
+          "icon": "🤖",
+          "items": [
+            "OpenAI / Anthropic SDK trong Node.js: streaming responses, function calling, error handling",
+            "RAG cơ bản: pgvector + embeddings — build được 1 feature AI thực tế vào side project",
+            "Prompt engineering cho backend: structured outputs, JSON mode, retry on malformed response",
+            "Cost & latency management: caching LLM responses, token counting, fallback strategy",
+            "AI-assisted dev workflow: Copilot hoặc Cursor hàng ngày — learn to prompt effectively"
+          ]
+        },
+        {
           "category": "Enterprise Reliability",
           "icon": "🛡️",
           "items": [
             "Circuit breaker với opossum: fallback strategy, half-open state handling",
             "Distributed tracing: OpenTelemetry + Jaeger — trace request qua microservices Node.js",
-            "SLI/SLO: define availability & latency targets cho service, setup alerting tương ứng",
-            "Chaos engineering nhỏ: simulate failure trong staging, verify resilience"
-          ]
-        },
-        {
-          "category": "Leadership Prep",
-          "icon": "👥",
-          "items": [
-            "Mentor 1 junior Node.js dev: pair programming, explain event loop & async patterns",
-            "Viết RFC đầu tiên: propose technical decision với pros/cons rõ ràng",
+            "DORA in practice: đo đủ 4 metrics cho team hiện tại, propose cải thiện 1 chỉ số cụ thể",
             "On-call: participate incident response, write post-mortem đầu tiên"
           ]
         }
@@ -134,12 +179,24 @@
       "period": "Tháng 19–24",
       "year": "Năm 2",
       "title": "Tech Ownership",
-      "subtitle": "Security, Cloud & Enterprise Compliance",
+      "subtitle": "Security, Cloud & Compliance",
       "color": "#A78BFA",
       "icon": "🎯",
       "level": "Mid → Senior",
-      "focus": "Security & Cloud",
+      "focus": "Security, Cloud & DORA Mastery",
+      "salary": "~$2,500–3,500/tháng",
+      "salaryNote": "Approaching senior. Nếu dưới mức này mà đã ship production systems và lead được feature, hãy negotiate hoặc tìm offer mới — market rate là leverage mạnh nhất.",
       "goals": [
+        {
+          "category": "NestJS & Enterprise Patterns",
+          "icon": "🐈",
+          "items": [
+            "NestJS deep dive: DI container, interceptors, guards, pipes, custom decorators",
+            "Repository pattern + Unit of Work với TypeORM/Prisma",
+            "CQRS cơ bản trong NestJS: Commands, Queries, Events",
+            "Message queue: Bull/BullMQ (Redis-backed) — job processing, retry, dead-letter queue"
+          ]
+        },
         {
           "category": "Security (Enterprise-grade)",
           "icon": "🔐",
@@ -159,6 +216,16 @@
             "Kubernetes: Deployment, Service, ConfigMap, HPA — scale Node.js service theo load",
             "Helm charts: package và version Node.js app deployments",
             "Terraform: provision được RDS, ElastiCache, MSK (Kafka) cho Node.js stack"
+          ]
+        },
+        {
+          "category": "DORA & Engineering Metrics",
+          "icon": "📊",
+          "items": [
+            "Dashboard đủ 4 DORA metrics cho team: Deployment Frequency, Lead Time, MTTR, Change Failure Rate",
+            "Value stream mapping: identify waste trong delivery pipeline của team",
+            "Propose & implement 1 cải tiến có đo lường được — ví dụ giảm Lead Time 30%",
+            "Trình bày DORA progress cho Engineering Manager với data thực tế"
           ]
         },
         {
@@ -182,7 +249,9 @@
       "color": "#F472B6",
       "icon": "🌟",
       "level": "Senior",
-      "focus": "Architecture & Org Impact",
+      "focus": "Architecture, AI Strategy & Testing at Scale",
+      "salary": "~$3,500–5,000/tháng",
+      "salaryNote": "Senior Engineer market rate VN on-site. Remote/overseas roles có thể 2–3x. Lúc này external visibility (blog, OSS) tạo ra pull thay vì push — người tìm đến bạn chứ không phải bạn đi xin.",
       "goals": [
         {
           "category": "Enterprise Architecture",
@@ -192,6 +261,26 @@
             "Event Sourcing + CQRS với EventStoreDB hoặc Kafka — implement trong Node.js",
             "DDD: model bounded contexts cho enterprise domain, define ubiquitous language với business",
             "API versioning strategy: deprecation policy, backward compatibility, consumer-driven contract testing (Pact)"
+          ]
+        },
+        {
+          "category": "Testing Strategy (Org Level)",
+          "icon": "🧪",
+          "items": [
+            "Define testing strategy cho cả engineering org: pyramid, ownership rules, flakiness budget",
+            "Test data management: factories, fixtures, seeding strategy cho microservices",
+            "Shift-left security testing: SAST/DAST integration vào pipeline, threat modeling cho new features",
+            "Establish testing culture: onboard team mới vào testing practices, code review checklist"
+          ]
+        },
+        {
+          "category": "AI/LLM — Production Grade",
+          "icon": "🤖",
+          "items": [
+            "Agentic workflows trong Node.js: tool use, multi-step reasoning, human-in-the-loop patterns",
+            "LLM observability: trace prompts/responses, monitor hallucination rate, cost per feature",
+            "Evaluate & recommend AI tooling cho engineering team (Copilot, Cursor, internal LLM tools)",
+            "Define AI usage guidelines cho team: safe, effective, và responsible LLM practices"
           ]
         },
         {
@@ -225,7 +314,9 @@
       "color": "#FB923C",
       "icon": "🧭",
       "level": "Senior → Staff / Tech Lead",
-      "focus": "People & Enterprise Politics",
+      "focus": "People, Agile at Scale & FinOps",
+      "salary": "~$5,000–8,000/tháng",
+      "salaryNote": "Staff/Tech Lead range. Compensation thường gồm base + bonus + equity. Negotiate total comp, không chỉ base. Benchmark với Levels.fyi và ITviec Salary Report.",
       "goals": [
         {
           "category": "People Leadership",
@@ -235,6 +326,16 @@
             "Navigate enterprise stakeholders: CTO, Product VP, Security team — communicate technical decisions lên C-level",
             "Conflict resolution: technical disagreements giữa teams, build consensus không dùng authority",
             "Define career ladder cho Backend engineer trong team"
+          ]
+        },
+        {
+          "category": "Agile at Scale (Enterprise VN)",
+          "icon": "🔄",
+          "items": [
+            "SAFe (Scaled Agile Framework): hiểu PI Planning, ART, Program Increment — phổ biến tại enterprise lớn VN",
+            "LeSS (Large-Scale Scrum): alternative cho SAFe, phù hợp hơn với product company",
+            "Engineering trong Agile at Scale: technical debt stories, enabler epics, architecture runway",
+            "DORA as leadership KPI: present quarterly DORA trends cho VP Engineering, đề xuất investment dựa trên data"
           ]
         },
         {
@@ -269,6 +370,8 @@
       "icon": "👑",
       "level": "Principal / Tech Lead",
       "focus": "Vision & Org Transformation",
+      "salary": "~$8,000–15,000+/tháng",
+      "salaryNote": "Principal/Tech Lead tại enterprise lớn hoặc remote cho công ty nước ngoài. External reputation, industry, và company size quyết định bạn ở đâu trong range này.",
       "goals": [
         {
           "category": "Technical Vision",
@@ -276,8 +379,18 @@
           "items": [
             "Define Node.js/JS platform vision 3 năm: runtime strategy, edge computing, serverless adoption",
             "Technology radar cho org: Adopt/Trial/Assess/Hold framework, communicate quarterly",
-            "AI/ML integration strategy: LLM APIs trong Node.js services, agentic workflows, RAG patterns",
+            "AI/ML integration strategy: define org-wide AI adoption roadmap — từ Copilot đến agentic systems",
             "Present engineering strategy cho Board / C-suite — link technical decisions đến business outcomes"
+          ]
+        },
+        {
+          "category": "DORA & Engineering Excellence",
+          "icon": "📊",
+          "items": [
+            "Org-wide DORA program: benchmark toàn bộ engineering org, identify elite vs low performer teams",
+            "Engineering productivity investment: justify headcount và tooling spend bằng DORA data",
+            "Define 'done' cho engineering excellence: internal benchmarks, guilds, communities of practice",
+            "Accelerate culture: psychological safety + fast feedback = foundation của high-performing team"
           ]
         },
         {
@@ -305,34 +418,151 @@
   ],
   "principles": [
     {
+      "icon": "🔥",
+      "title": "Fix Pain Points First",
+      "desc": "Học thứ giải quyết được vấn đề ngay hôm nay — System design, DB perf, DevOps. Đừng học theo thứ tự sách giáo khoa."
+    },
+    {
+      "icon": "⚡",
+      "title": "Side Project = Lab Duy Nhất",
+      "desc": "Không có mentor thì side project là nơi duy nhất bạn toàn quyền kiểm soát. Bắt đầu trong 2 tuần, không cần idea hay."
+    },
+    {
+      "icon": "🧭",
+      "title": "Tạo Feedback Loop Nhân Tạo",
+      "desc": "AI review code, post design lên cộng đồng, mock interview hàng tháng — không có senior thì tự tạo feedback."
+    },
+    {
+      "icon": "📊",
+      "title": "DORA is Your Compass",
+      "desc": "4 metrics này phản ánh sức khỏe engineering team chính xác hơn bất kỳ KPI nào khác. Học đo sớm."
+    },
+    {
+      "icon": "🤖",
+      "title": "AI is a Multiplier",
+      "desc": "Không phải thay thế. Người dùng AI tốt outperform người không dùng 3–5x. Integrate vào workflow ngay từ hôm nay."
+    },
+    {
       "icon": "📚",
       "title": "Learn in Public",
-      "desc": "Viết blog, làm talks — dạy người khác là cách học sâu nhất"
+      "desc": "Viết blog, làm talks, post diagram lên cộng đồng — dạy người khác là cách học sâu nhất và tạo network tốt nhất."
     },
     {
       "icon": "🔁",
       "title": "Depth before Breadth",
-      "desc": "Master 1 thứ trước khi nhảy sang cái khác. T-shaped knowledge."
+      "desc": "Master 1 thứ trước khi nhảy sang cái khác. T-shaped knowledge. Outsource env dễ dàng bị cuốn theo chiều ngang."
     },
     {
-      "icon": "🤝",
-      "title": "Invest in People",
-      "desc": "Career của bạn tăng tốc khi bạn giúp người khác tăng tốc"
+      "icon": "💰",
+      "title": "Know Your Market Value",
+      "desc": "Salary tăng chủ yếu khi đổi job. Apply interview định kỳ dù không tìm job — để biết mình đáng giá bao nhiêu trên thị trường."
+    }
+  ],
+  "salary": [
+    {
+      "phase": "Giai đoạn 1 — Junior → Mid",
+      "period": "Tháng 1–6",
+      "range": "~$800–1,200/tháng",
+      "note": "Junior backend VN market. Tăng lương sau mốc này khi chứng minh được output độc lập và propose solution thay vì chỉ implement."
     },
     {
-      "icon": "⚡",
-      "title": "Ship & Iterate",
-      "desc": "Done > Perfect. Build, measure, learn. Đừng over-engineer"
+      "phase": "Giai đoạn 2 — Mid Junior",
+      "period": "Tháng 7–12",
+      "range": "~$1,200–1,800/tháng",
+      "note": "Đủ điều kiện negotiate mid-level nếu đã ship feature độc lập, propose solution, và có side project làm bằng chứng technical growth."
     },
     {
-      "icon": "🧭",
-      "title": "Context Switching",
-      "desc": "Tech Lead = Technical + Communication + Business. Develop tất cả"
+      "phase": "Giai đoạn 3 — Mid",
+      "period": "Tháng 13–18",
+      "range": "~$1,800–2,500/tháng",
+      "note": "Mid level rõ ràng. Nên chủ động negotiate hoặc thử apply job mới để test market value. Track record service ownership + side project là leverage tốt nhất."
     },
     {
-      "icon": "📊",
-      "title": "Measure Progress",
-      "desc": "Review roadmap mỗi 6 tháng. Điều chỉnh, đừng cứng nhắc"
+      "phase": "Giai đoạn 4 — Mid → Senior",
+      "period": "Tháng 19–24",
+      "range": "~$2,500–3,500/tháng",
+      "note": "Approaching senior. Nếu dưới mức này mà đã ship production systems và lead được feature, hãy negotiate hoặc tìm offer mới."
+    },
+    {
+      "phase": "Giai đoạn 5 — Senior",
+      "period": "Tháng 25–36",
+      "range": "~$3,500–5,000/tháng",
+      "note": "Senior Engineer market rate VN on-site. Remote/overseas roles có thể 2–3x. External visibility tạo ra pull thay vì push."
+    },
+    {
+      "phase": "Giai đoạn 6 — Staff / Tech Lead",
+      "period": "Tháng 37–48",
+      "range": "~$5,000–8,000/tháng",
+      "note": "Staff/Tech Lead range. Negotiate total comp (base + bonus + equity), không chỉ base. Benchmark với Levels.fyi và ITviec Salary Report."
+    },
+    {
+      "phase": "Giai đoạn 7 — Principal / Tech Lead",
+      "period": "Tháng 49–72",
+      "range": "~$8,000–15,000+/tháng",
+      "note": "Principal/Tech Lead tại enterprise lớn hoặc remote cho công ty nước ngoài. External reputation và company size quyết định vị trí trong range."
+    }
+  ],
+  "negotiateTips": [
+    {
+      "title": "Năm 1–2: Leverage = Output cụ thể",
+      "desc": "Track và document mọi thứ bạn ship. 'Tôi optimize query X giảm latency từ 2s → 80ms' mạnh hơn 'Tôi làm backend'. Số liệu cụ thể là vũ khí negotiate."
+    },
+    {
+      "title": "Năm 3: Leverage = Optionality",
+      "desc": "Senior title = thị trường cần bạn. Nhận interview thường xuyên ngay cả khi không tìm job — để biết market rate thực tế của mình là bao nhiêu."
+    },
+    {
+      "title": "Năm 4+: Leverage = Replacement Cost",
+      "desc": "Tech Lead khó thay thế. Frame: 'Cost to replace me = 6 months hiring + 6 months ramp-up + knowledge loss'. Leadership hiểu ngôn ngữ này."
+    },
+    {
+      "title": "Always: Negotiate Total Comp",
+      "desc": "Base salary chỉ là 1 phần. Stock/RSU, bonus, learning budget (5–10M/năm), remote days, equipment — negotiate tất cả, không chỉ base."
+    }
+  ],
+  "books": [
+    {
+      "phase": "Năm 1 — Priority (đọc ngay)",
+      "color": "#4ADE80",
+      "items": ["Designing Data-Intensive Apps — Kleppmann (quan trọng nhất)", "Node.js Design Patterns — Casciaro", "Clean Code — Robert Martin"]
+    },
+    {
+      "phase": "Năm 1–2 — TypeScript & Testing",
+      "color": "#60A5FA",
+      "items": ["TypeScript Deep Dive — Basarat (free online)", "The Art of Unit Testing — Roy Osherove", "NestJS Docs (toàn bộ — free)"]
+    },
+    {
+      "phase": "Năm 2–3 — Architecture",
+      "color": "#F59E0B",
+      "items": ["System Design Interview Vol 1&2 — Alex Xu", "Building Microservices — Sam Newman", "Domain-Driven Design — Eric Evans"]
+    },
+    {
+      "phase": "Năm 3–4 — SRE & DevOps",
+      "color": "#F472B6",
+      "items": ["SRE Book — Google (free online)", "Accelerate — Nicole Forsgren", "The Phoenix Project — Gene Kim"]
+    },
+    {
+      "phase": "Năm 4–5 — Leadership",
+      "color": "#FB923C",
+      "items": ["An Elegant Puzzle — Will Larson", "The Staff Engineer's Path — Tanya Reilly", "The Manager's Path — Camille Fournier"]
+    }
+  ],
+  "aiTools": [
+    {
+      "tool": "GitHub Copilot / Cursor",
+      "use": "Code completion & refactoring hàng ngày — learn to prompt effectively, đừng accept blindly"
+    },
+    {
+      "tool": "Claude / ChatGPT",
+      "use": "Architecture brainstorming, RFC drafting, code review, rubber duck debugging, explain concepts"
+    },
+    {
+      "tool": "Perplexity",
+      "use": "Technical research nhanh — tốt hơn Google cho engineering questions có nhiều context"
+    },
+    {
+      "tool": "v0 / Bolt",
+      "use": "Rapid prototype UI khi cần demo concept cho stakeholders — tiết kiệm thời gian không cần thiết"
     }
   ]
 }
