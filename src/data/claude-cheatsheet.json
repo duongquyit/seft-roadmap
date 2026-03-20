@@ -1,0 +1,288 @@
+{
+  "categories": [
+    {
+      "id": "setup",
+      "label": "Cài đặt",
+      "color": "#A78BFA"
+    },
+    {
+      "id": "workflow",
+      "label": "Workflow",
+      "color": "#34D399"
+    },
+    {
+      "id": "context",
+      "label": "Context",
+      "color": "#FBBF24"
+    },
+    {
+      "id": "prompt",
+      "label": "Prompting",
+      "color": "#60A5FA"
+    },
+    {
+      "id": "git",
+      "label": "Git & Safety",
+      "color": "#F87171"
+    },
+    {
+      "id": "advanced",
+      "label": "Nâng cao",
+      "color": "#F472B6"
+    }
+  ],
+  "cards": [
+    {
+      "id": "claude-md",
+      "cat": "setup",
+      "icon": "📋",
+      "title": "CLAUDE.md — Bộ nhớ dự án",
+      "badge": "Quan trọng nhất",
+      "body": "File đặc biệt Claude tự động đọc để hiểu ngữ cảnh project. Đây là công cụ quan trọng nhất để hướng dẫn AI.",
+      "tips": [
+        "Bash commands phổ biến: npm run test, npm run build",
+        "Code style: \"Dùng ES modules, không CommonJS\"",
+        "Kiến trúc: \"State quản lý bởi Zustand, xem src/stores\"",
+        "Testing: \"Component mới cần test file dùng RTL\"",
+        "Dùng nhiều CLAUDE.md theo thư mục (root + /frontend + /backend)"
+      ],
+      "snippet": "# CLAUDE.md\nCommands: npm run test | npm run build\nStyle: ES modules, functional components + hooks\nState: Zustand (src/stores)\nTests: React Testing Library",
+      "refs": [
+        { "label": "Official: Claude Code Best Practices — code.claude.com", "url": "https://code.claude.com/docs/en/best-practices" },
+        { "label": "7 Claude Code Best Practices (eesel.ai)", "url": "https://www.eesel.ai/blog/claude-code-best-practices" },
+        { "label": "CLAUDE.md example template (GitHub)", "url": "https://github.com/shanraisshan/claude-code-best-practice/blob/main/CLAUDE.md" }
+      ]
+    },
+    {
+      "id": "plan-execute",
+      "cat": "workflow",
+      "icon": "🗺️",
+      "title": "Lập kế hoạch trước khi code",
+      "badge": "Workflow",
+      "body": "Đừng nhảy thẳng vào code. Bắt buộc Claude phải suy nghĩ trước — tiết kiệm rất nhiều thời gian sửa lỗi về sau.",
+      "tips": [
+        "Bước 1: Yêu cầu plan chi tiết (\"think hard about this\")",
+        "Bước 2: Nói rõ \"Chưa viết code. Chỉ đưa plan.\"",
+        "Bước 3: Review, điều chỉnh plan đến khi ổn",
+        "Bước 4: Bật đèn xanh — \"Ok, bắt đầu implement\""
+      ],
+      "snippet": null,
+      "refs": [
+        { "label": "Plan-then-execute workflow guide (eesel.ai)", "url": "https://www.eesel.ai/blog/claude-code-best-practices#plan-then-execute" },
+        { "label": "Claude Code Best Practices (community guide)", "url": "https://rosmur.github.io/claudecode-best-practices/" },
+        { "label": "Planner/Developer/Tester pattern (skywork.ai)", "url": "https://skywork.ai/blog/claude-code-2-0-best-practices-ai-coding-workflow-2025/" }
+      ]
+    },
+    {
+      "id": "context-mgmt",
+      "cat": "context",
+      "icon": "🧹",
+      "title": "Quản lý Context Window",
+      "badge": "Context",
+      "body": "Context window đầy là nguyên nhân #1 làm giảm hiệu suất. Quản lý tốt = kết quả tốt hơn.",
+      "commands": [
+        { "cmd": "/clear", "desc": "Xóa lịch sử chat — dùng khi bắt đầu task mới" },
+        { "cmd": "/compact", "desc": "Tóm tắt context khi đến 70–90% (thay vì /clear)" },
+        { "cmd": "Escape", "desc": "Dừng Claude (không phải Ctrl+C)" },
+        { "cmd": "Escape ×2", "desc": "Xem danh sách tất cả messages trước đó" }
+      ],
+      "tips": [
+        "0–50%: làm tự do · 50–70%: chú ý · 70–90%: /compact · 90%+: /clear bắt buộc",
+        "Dùng sub-agent để tách biệt context giữa các task phức tạp"
+      ],
+      "snippet": null,
+      "refs": [
+        { "label": "Official: Context management — code.claude.com", "url": "https://code.claude.com/docs/en/best-practices" },
+        { "label": "Ultimate Guide: context thresholds (GitHub)", "url": "https://github.com/FlorianBruniaux/claude-code-ultimate-guide" },
+        { "label": "Context degradation patterns (community)", "url": "https://rosmur.github.io/claudecode-best-practices/" }
+      ]
+    },
+    {
+      "id": "prompting",
+      "cat": "prompt",
+      "icon": "✍️",
+      "title": "Prompting hiệu quả",
+      "badge": "Prompting",
+      "body": "Chất lượng output = chất lượng prompt. Garbage in, garbage out.",
+      "tips": [
+        "@file: Dùng tab-completion để chỉ đúng file cần xem/sửa",
+        "URL: Paste link GitHub issue, docs, StackOverflow trực tiếp",
+        "Image: Kéo thả screenshot UI/diagram vào terminal",
+        "Cụ thể: \"Viết unit test cho foo.py, cover case user chưa đăng nhập, không dùng mock\"",
+        "#memory: Dùng # để lưu rule vào memory nhanh"
+      ],
+      "snippet": null,
+      "refs": [
+        { "label": "Prompt Engineering for Claude 4 (Anthropic docs)", "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices" },
+        { "label": "Prompt Engineering Overview (Anthropic docs)", "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" },
+        { "label": "Prompting with context tips (eesel.ai)", "url": "https://www.eesel.ai/blog/claude-code-best-practices#specific-prompting" }
+      ]
+    },
+    {
+      "id": "git-safety",
+      "cat": "git",
+      "icon": "🔒",
+      "title": "Git workflow an toàn",
+      "badge": "Git & Safety",
+      "body": "AI có thể làm sai. Branch mới = safety net. Nếu hỏng, xóa branch và làm lại.",
+      "tips": [
+        "Luôn tạo branch mới cho mỗi feature/bugfix",
+        "Dùng git worktrees để chạy nhiều Claude song song trên các branch khác nhau",
+        "Writer/Reviewer pattern: Claude A viết code → Claude B review",
+        "Dùng /install-github-app để auto-review PR"
+      ],
+      "snippet": "# .claude/claude-code-review.yml\ndirect_prompt: |\n  Review PR: bugs & security only.\n  Be concise.",
+      "refs": [
+        { "label": "Official: Git & parallel sessions — code.claude.com", "url": "https://code.claude.com/docs/en/best-practices" },
+        { "label": "Git worktrees & parallel Claude (eesel.ai)", "url": "https://www.eesel.ai/blog/claude-code-best-practices#git-workflows" },
+        { "label": "/reviewpr & /commit commands (GitHub)", "url": "https://github.com/awattar/claude-code-best-practices" }
+      ]
+    },
+    {
+      "id": "slash-commands",
+      "cat": "advanced",
+      "icon": "⚡",
+      "title": "Custom Slash Commands",
+      "badge": "Nâng cao",
+      "body": "Tạo prompt templates tái sử dụng cho các workflow lặp đi lặp lại.",
+      "tips": [
+        "Dùng $ARGUMENTS để nhận tham số",
+        "Subfolder: /builder/plugin → .claude/commands/builder/plugin.md",
+        "Dùng /plugin để xem marketplace"
+      ],
+      "snippet": "# .claude/commands/test.md\nTạo tests cho: $ARGUMENTS\n- Dùng Jest + React Testing Library\n- Mock Firebase dependencies\n- Cover edge cases",
+      "refs": [
+        { "label": "Official: Custom commands docs — code.claude.com", "url": "https://code.claude.com/docs/en/best-practices" },
+        { "label": "Custom commands deep-dive (builder.io)", "url": "https://www.builder.io/blog/claude-code#custom-slash-commands" },
+        { "label": "/custom-init, /commit, /issue examples (GitHub)", "url": "https://github.com/awattar/claude-code-best-practices" }
+      ]
+    },
+    {
+      "id": "hooks",
+      "cat": "advanced",
+      "icon": "🪝",
+      "title": "Hooks tự động hóa",
+      "badge": "Nâng cao",
+      "body": "Shell commands chạy tự động trước/sau khi Claude thực hiện thao tác.",
+      "tips": [
+        "PreToolUse, PostToolUse, Notification, Stop",
+        "Trigger TypeScript check sau khi sửa file .ts/.tsx",
+        "Dùng /hooks để cấu hình qua menu"
+      ],
+      "snippet": "# .claude/settings.json\n{\n  \"hooks\": [{\n    \"matcher\": \"Edit|Write\",\n    \"hooks\": [{\n      \"type\": \"command\",\n      \"command\": \"prettier --write\"\n    }]\n  }]\n}",
+      "refs": [
+        { "label": "Official: Hooks lifecycle — code.claude.com", "url": "https://code.claude.com/docs/en/best-practices" },
+        { "label": "Hooks & settings.json walkthrough (builder.io)", "url": "https://www.builder.io/blog/claude-code#customization" },
+        { "label": "Hooks for quality gates (community guide)", "url": "https://rosmur.github.io/claudecode-best-practices/" }
+      ]
+    },
+    {
+      "id": "ux-tips",
+      "cat": "setup",
+      "icon": "🛠️",
+      "title": "Thiết lập & UX Tips",
+      "badge": "Cài đặt",
+      "body": "Những quirk của Claude Code cần biết để không bị bó tay.",
+      "commands": [
+        { "cmd": "Shift+Enter", "desc": "Xuống dòng (cần setup /terminal-setup)" },
+        { "cmd": "Ctrl+V", "desc": "Paste ảnh (không phải Cmd+V)" },
+        { "cmd": "Shift+Drag", "desc": "Kéo file vào để reference" },
+        { "cmd": "↑ Arrow", "desc": "Xem lại chat từ session trước" }
+      ],
+      "tips": [
+        "Dùng --dangerously-skip-permissions để bỏ qua xác nhận liên tục (YOLO mode)"
+      ],
+      "snippet": null,
+      "refs": [
+        { "label": "Terminal UI quirks & tips (builder.io)", "url": "https://www.builder.io/blog/claude-code#terminal-ui" },
+        { "label": "Permission system explained (builder.io)", "url": "https://www.builder.io/blog/claude-code#permission-system" },
+        { "label": "claudelog.com — community insights & mechanics", "url": "https://claudelog.com/" }
+      ]
+    },
+    {
+      "id": "parallel",
+      "cat": "advanced",
+      "icon": "🔀",
+      "title": "Song song hóa với Multi-session",
+      "badge": "Nâng cao",
+      "body": "Chạy nhiều Claude cùng lúc để tăng tốc độ phát triển với các task độc lập.",
+      "tips": [
+        "Cài extension VS Code để mở nhiều panes",
+        "Git worktrees: mỗi Claude một thư mục riêng, tránh conflict",
+        "Headless mode: claude -p \"task\" cho scripts/CI",
+        "Queue messages: nhập nhiều prompt, Claude xử lý tuần tự thông minh"
+      ],
+      "snippet": "for file in $(cat files.txt); do\n  claude -p \"Migrate $file to Vue\" &\ndone",
+      "refs": [
+        { "label": "Official: Parallel sessions & worktrees — code.claude.com", "url": "https://code.claude.com/docs/en/best-practices" },
+        { "label": "Message queuing system (builder.io)", "url": "https://www.builder.io/blog/claude-code#queuing" },
+        { "label": "Multi-instance ROI & agent teams (GitHub)", "url": "https://github.com/FlorianBruniaux/claude-code-ultimate-guide" }
+      ]
+    },
+    {
+      "id": "mcp",
+      "cat": "advanced",
+      "icon": "🔌",
+      "title": "MCP — Mở rộng khả năng",
+      "badge": "Nâng cao",
+      "body": "Model Context Protocol kết nối Claude với external services.",
+      "tips": [
+        "Puppeteer: browser automation",
+        "Sentry: đào error logs tự động",
+        "GitHub: tự động address PR comments",
+        "Dùng --allowedTools để giới hạn quyền batch ops"
+      ],
+      "snippet": null,
+      "refs": [
+        { "label": "MCP overview — Anthropic docs", "url": "https://docs.anthropic.com/en/docs/agents-and-tools/mcp" },
+        { "label": "MCP integration in Claude Code — code.claude.com", "url": "https://code.claude.com/docs/en/best-practices" },
+        { "label": "MCP servers in subagents (GitHub example)", "url": "https://github.com/shanraisshan/claude-code-best-practice/blob/main/CLAUDE.md" }
+      ]
+    },
+    {
+      "id": "onboarding",
+      "cat": "workflow",
+      "icon": "🗂️",
+      "title": "Onboarding codebase mới",
+      "badge": "Workflow",
+      "body": "Dùng Claude như senior engineer để học codebase nhanh hơn.",
+      "tips": [
+        "\"async move {...} dòng 134 trong foo.rs làm gì?\"",
+        "\"CustomerOnboardingFlowImpl xử lý edge case nào?\"",
+        "\"Những file nào liên quan đến payment flow?\"",
+        "Tiết kiệm ~80% thời gian so với tự đọc docs theo báo cáo nội bộ Anthropic"
+      ],
+      "snippet": null,
+      "refs": [
+        { "label": "Official: Learning & exploration — code.claude.com", "url": "https://code.claude.com/docs/en/best-practices" },
+        { "label": "How Anthropic teams use Claude Code (PDF)", "url": "https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf" },
+        { "label": "Real-world codebase navigation tips (claudelog.com)", "url": "https://claudelog.com/" }
+      ]
+    },
+    {
+      "id": "model-select",
+      "cat": "setup",
+      "icon": "🤖",
+      "title": "Chọn model phù hợp",
+      "badge": "Cài đặt",
+      "body": "Mặc định dùng Opus đến 50% usage, sau đó tự chuyển Sonnet tiết kiệm chi phí.",
+      "tips": [
+        "Opus 4.6: Task phức tạp, reasoning sâu, codebase lớn",
+        "Sonnet 4.6: Task hàng ngày, cân bằng tốc độ & chất lượng",
+        "Haiku 4.5: Task đơn giản, tốc độ cao, chi phí thấp"
+      ],
+      "snippet": null,
+      "refs": [
+        { "label": "Claude models overview — platform.claude.com", "url": "https://platform.claude.com/docs/en/home" },
+        { "label": "Model selection & pricing analysis (builder.io)", "url": "https://www.builder.io/blog/claude-code#economics" },
+        { "label": "Haiku agent for sub-tasks (GitHub ultimate guide)", "url": "https://github.com/FlorianBruniaux/claude-code-ultimate-guide" }
+      ]
+    }
+  ],
+  "tips": [
+    { "icon": "🧠", "title": "Context là tất cả", "desc": "Càng viết CLAUDE.md chi tiết, Claude hoạt động càng nhất quán. Đây là đầu tư một lần, dùng mãi mãi." },
+    { "icon": "🎯", "title": "Plan trước, code sau", "desc": "\"Vibe coding\" tạo ra technical debt. Production code cần tư duy có cấu trúc và planning rõ ràng." },
+    { "icon": "🔐", "title": "Safety first", "desc": "AI có thể sai. Branch, commit thường xuyên, review kỹ. Bạn chịu trách nhiệm cho code trong PR của mình." },
+    { "icon": "⚡", "title": "Đơn giản thắng phức tạp", "desc": "Simple control loops > multi-agent systems. Thêm độ phức tạp chỉ khi đã proven là cần thiết." }
+  ]
+}

@@ -10,6 +10,15 @@ const roadmaps = [
     tags: ["Node.js", "Enterprise", "Architecture"],
     color: "#60A5FA",
   },
+  {
+    path: "/claude",
+    icon: "🤖",
+    title: "Claude AI Cheat Sheet",
+    subtitle: "Best practices để dùng Claude Code hiệu quả",
+    duration: "Cập nhật liên tục",
+    tags: ["Claude Code", "Prompting", "Workflow"],
+    color: "#A78BFA",
+  },
   // Thêm roadmap mới vào đây, ví dụ:
   // {
   //   path: "/frontend",
@@ -113,7 +122,7 @@ export default function Home() {
               </div>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <span style={{ fontSize: 12, color: "#475569" }}>⏱ {rm.duration}</span>
-                <span style={{ fontSize: 12, color: rm.color, fontWeight: 600 }}>Xem roadmap →</span>
+                <span style={{ fontSize: 12, color: rm.color, fontWeight: 600 }}>Xem ngay →</span>
               </div>
             </div>
           ))}
